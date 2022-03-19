@@ -10,7 +10,20 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
+<body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">ヘルスケアアプリ</a></h1>
+        <div class="user_nav grid-6">
+          <a class="graph" href="/">健康状態を記録する</a>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <p>
+        Copyright HealthCareApp 2022.
+      </p>
+    </footer>
   </body>
 </html>
