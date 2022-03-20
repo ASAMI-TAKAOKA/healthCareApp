@@ -6,24 +6,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
 <body>
+    <%= render 'layouts/header' %> 
     <header class="header">
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">ヘルスケアアプリ</a></h1>
-        <div class="user_nav grid-6">
-          <a class="graph" href="/records/new">健康状態を記録する</a>
-        </div>
       </div>
     </header>
     <%= yield %>
-    <footer>
-      <p>
-        Copyright HealthCareApp 2022.
-      </p>
-    </footer>
-  </body>
+    <%= render 'layouts/footer' %>
+</body>
 </html>
