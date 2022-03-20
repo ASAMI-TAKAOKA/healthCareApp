@@ -1,24 +1,6 @@
-# README
+# 健康管理アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# URL　https://health-care-app-20220321.herokuapp.com/
 
-Things you may want to cover:
+### 残業続きで体調を管理しないといけないと思い、作成いたしました。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
