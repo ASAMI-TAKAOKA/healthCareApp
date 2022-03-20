@@ -1,0 +1,15 @@
+<h1>健康状態</h1>
+<%= line_chart [['2022-05-01',60 ], ['2022-06-01', 50], ['2022-07-01', 40]] %>
+<br>
+
+<div class="contents row">
+  <% @records.each do |record| %>
+    <div class="content_record" >
+      <p><%= record.activity %></p>
+      <p><%= record.feeling %></p>
+      <p><%= record.condition %></p>
+      <p><%= record.appetite %></p>
+      <%= link_to '削除', "/records/#{record.id}", method: :delete %>
+    </div>
+  <% end %>
+</div>

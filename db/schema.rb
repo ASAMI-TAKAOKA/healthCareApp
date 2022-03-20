@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_19_154011) do
+ActiveRecord::Schema.define(version: 2022_03_20_102728) do
 
   create_table "graphs", charset: "utf8mb4", force: :cascade do |t|
+    t.string "activity"
+    t.string "feeling"
+    t.string "condition"
+    t.string "appetite"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "records", charset: "utf8mb4", force: :cascade do |t|
     t.string "activity"
     t.string "feeling"
     t.string "condition"

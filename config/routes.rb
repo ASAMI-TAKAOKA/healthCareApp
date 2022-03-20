@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'graphs#index'
+  root to: 'records#index'
+  resources :records, only: [:new, :create, :edit, :update, :destroy]
 end
