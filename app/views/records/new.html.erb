@@ -1,12 +1,47 @@
 <div class="contents_form">
   <div class="container_box">
-    <h3>記録する</h3>
-    <%= form_with(model: @record, local: true) do |form|  %>
-      <%= form.text_area :activity, placeholder: "活動量", class: 'container'%>
-      <%= form.text_area :feeling, placeholder: "気分", class: 'container'%>
-      <%= form.text_area :condition, placeholder: "体調", class: 'container'%>
-      <%= form.text_area :appetite, placeholder: "食欲", class: 'container'%>
-      <%= form.submit "記録する", class: 'container'%>
+    <h3>今日の状態を記録する</h3>
+  </div>
+</div>
+
+<div class="contents_form">
+  <div class="container_box">
+    <%= form_with(model: @record, local: true) do |f|  %>
+      <%# 活動量 %>
+      <%= f.label :activity, '活動量：', {class: 'form-label'} %>
+      <%= f.radio_button :activity, -2, {} %> +1
+      <%= f.radio_button :activity, -1, {} %> +2
+      <%= f.radio_button :activity, 0, {checked: true} %> 0
+      <%= f.radio_button :activity, 1, {} %> +1
+      <%= f.radio_button :activity, 2, {} %> +2
+      <br>
+      <%# 気分 %>
+      <%= f.label :feeling, '気分：', {class: 'form-label'} %>
+      <%= f.radio_button :feeling, -2, {} %> +1
+      <%= f.radio_button :feeling, -1, {} %> +2
+      <%= f.radio_button :feeling, 0, {checked: true} %> 0
+      <%= f.radio_button :feeling, 1, {} %> +1
+      <%= f.radio_button :feeling, 2, {} %> +2
+      <br>
+      <%# 体調 %>
+      <%= f.label :condition, '体調：', {class: 'form-label'} %>
+      <%= f.radio_button :condition, -2, {} %> +1
+      <%= f.radio_button :condition, -1, {} %> +2
+      <%= f.radio_button :condition, 0, {checked: true} %> 0
+      <%= f.radio_button :condition, 1, {} %> +1
+      <%= f.radio_button :condition, 2, {} %> +2
+      <br>
+      <%# 食欲 %>
+      <%= f.label :appetite, '食欲：', {class: 'form-label'} %>
+      <%= f.radio_button :appetite, -2, {} %> +1
+      <%= f.radio_button :appetite, -1, {} %> +2
+      <%= f.radio_button :appetite, 0, {checked: true} %> 0
+      <%= f.radio_button :appetite, 1, {} %> +1
+      <%= f.radio_button :appetite, 2, {} %> +2
+      <br>
+      <%= f.submit "記録する", class: 'btn btn-primary'%>
     <% end %>
   </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+

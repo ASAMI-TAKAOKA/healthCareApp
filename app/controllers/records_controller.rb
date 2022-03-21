@@ -9,7 +9,9 @@ class RecordsController < ApplicationController
   end
 
   def create
+    # binding.pry
     Record.create(record_params)
+    # binding.pry
   end
 
   def destroy

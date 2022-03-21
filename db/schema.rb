@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 2022_03_20_102728) do
   end
 
   create_table "records", charset: "utf8mb4", force: :cascade do |t|
-    t.string "activity"
-    t.string "feeling"
-    t.string "condition"
-    t.string "appetite"
+    t.integer "activity"
+    t.integer "feeling"
+    t.integer "condition"
+    t.integer "appetite"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

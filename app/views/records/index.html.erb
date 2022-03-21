@@ -8,10 +8,10 @@
 <div class="contents row">
   <% @records.each do |record| %>
     <div class="content_record" >
-      <p><%= record.activity %></p>
-      <p><%= record.feeling %></p>
-      <p><%= record.condition %></p>
-      <p><%= record.appetite %></p>
+      <p>活動量：<%= record.activity %></p>
+      <p>気分：<%= record.feeling %></p>
+      <p>体調：<%= record.condition %></p>
+      <p>食欲：<%= record.appetite %></p>
       <%= link_to '削除', "/records/#{record.id}", method: :delete %>
     </div>
   <% end %>
