@@ -9,32 +9,32 @@
     <%= form_with(model: @record, local: true) do |f|  %>
       <%# 活動量 %>
       <%= f.label :activity, '活動量：', {class: 'form-label'} %>
-      <%= f.radio_button :activity, -2, {} %> +1
-      <%= f.radio_button :activity, -1, {} %> +2
+      <%= f.radio_button :activity, -2, {} %> -2
+      <%= f.radio_button :activity, -1, {} %> -1
       <%= f.radio_button :activity, 0, {checked: true} %> 0
       <%= f.radio_button :activity, 1, {} %> +1
       <%= f.radio_button :activity, 2, {} %> +2
       <br>
       <%# 気分 %>
       <%= f.label :feeling, '気分：', {class: 'form-label'} %>
-      <%= f.radio_button :feeling, -2, {} %> +1
-      <%= f.radio_button :feeling, -1, {} %> +2
+      <%= f.radio_button :feeling, -2, {} %> -2
+      <%= f.radio_button :feeling, -1, {} %> -1
       <%= f.radio_button :feeling, 0, {checked: true} %> 0
       <%= f.radio_button :feeling, 1, {} %> +1
       <%= f.radio_button :feeling, 2, {} %> +2
       <br>
       <%# 体調 %>
       <%= f.label :condition, '体調：', {class: 'form-label'} %>
-      <%= f.radio_button :condition, -2, {} %> +1
-      <%= f.radio_button :condition, -1, {} %> +2
+      <%= f.radio_button :condition, -2, {} %> -2
+      <%= f.radio_button :condition, -1, {} %> -1
       <%= f.radio_button :condition, 0, {checked: true} %> 0
       <%= f.radio_button :condition, 1, {} %> +1
       <%= f.radio_button :condition, 2, {} %> +2
       <br>
       <%# 食欲 %>
       <%= f.label :appetite, '食欲：', {class: 'form-label'} %>
-      <%= f.radio_button :appetite, -2, {} %> +1
-      <%= f.radio_button :appetite, -1, {} %> +2
+      <%= f.radio_button :appetite, -2, {} %> -2
+      <%= f.radio_button :appetite, -1, {} %> -1
       <%= f.radio_button :appetite, 0, {checked: true} %> 0
       <%= f.radio_button :appetite, 1, {} %> +1
       <%= f.radio_button :appetite, 2, {} %> +2

@@ -3,12 +3,13 @@
     <h1>健康状態</h1>
   </div>
 </div>
-<%= line_chart [['2022-05-01',60 ], ['2022-06-01', 50], ['2022-07-01', 40]] %>
+<%= line_chart [['2022-05-01',60 ], ['2022-06-01', 50], ['2022-07-01', 40], ['2022-08-01', 100], ['2022-09-01', 40]] %>
 <br>
 
 <div class="contents row">
   <% @records.each do |record| %>
     <div class="content_record" >
+      <p>記録日：<%= record.created_at.strftime("%F") %></p>
       <p>活動量：<%= record.activity %></p>
       <p>気分：<%= record.feeling %></p>
       <p>体調：<%= record.condition %></p>
