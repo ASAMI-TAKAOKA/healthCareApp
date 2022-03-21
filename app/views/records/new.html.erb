@@ -7,6 +7,11 @@
 <div class="contents_form">
   <div class="container_box">
     <%= form_with(model: @record, local: true) do |f|  %>
+      <%# 日付選択 %>
+      <br>
+      <%= f.datetime_field :sample_at %>
+      <br>
+      <br>
       <%# 活動量 %>
       <%= f.label :activity, '活動量：', {class: 'form-label'} %>
       <%= f.radio_button :activity, -2, {} %> -2
