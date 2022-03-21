@@ -1,7 +1,7 @@
 class RecordsController < ApplicationController
 
   def index
-    @records = Record.all
+    @records = Record.all.order("created_at DESC")
   end
 
   def new
@@ -9,9 +9,7 @@ class RecordsController < ApplicationController
   end
 
   def create
-    # binding.pry
     Record.create(record_params)
-    # binding.pry
   end
 
   def destroy
