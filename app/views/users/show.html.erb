@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p>UserID：<%= current_user.id %>さんの記録一覧</p>
+  <% @records.each do |record| %>
+    <p><%= record.activity %></p>
+    <p><%= record.feeling %></p>
+    <p><%= record.condition %></p>
+    <p><%= record.appetite %></p>
+  <% end %>
+</div>

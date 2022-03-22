@@ -5,6 +5,7 @@ ruby '3.0.0'
 gem 'pry-rails'
 gem 'chartkick'
 gem 'groupdate'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'

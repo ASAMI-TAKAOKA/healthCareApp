@@ -33,7 +33,7 @@ class RecordsController < ApplicationController
 
   private
   def record_params
-    params.require(:record).permit(:activity, :feeling, :condition, :appetite)
+    params.require(:record).permit(:activity, :feeling, :condition, :appetite).merge(user_id: current_user.id) #current_user_idをマージ
   end
 
   # def set_post
