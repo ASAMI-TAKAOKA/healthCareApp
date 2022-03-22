@@ -3,10 +3,11 @@
   <% if user_signed_in? %>
     <a class="navbar-brand" href="/">ヘルスケアアプリ</a>
     <%= link_to "マイページ", "/users/#{current_user.id}", class: "btn btn-primary" %>
-    <a class="btn btn-primary" href="/records/new">健康状態を記録する</a>    
+    <a class="btn btn-primary" href="/records/new">健康状態を記録する</a>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary"  %>
   <% else %>
-    <%= link_to "ログイン", new_user_session_path %>
-    <%= link_to "新規登録", new_user_registration_path %>
+    <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary" %>
+    <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary" %>
   <% end %>
   </div>
 </nav>
