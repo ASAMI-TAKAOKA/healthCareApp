@@ -3,7 +3,9 @@
     <h1>健康状態</h1>
   </div>
 </div>
-<%= line_chart @activity %>
+<div class="graph">
+<%= line_chart @activity, width: "80%", height: "400px"%>
+</div>
 <div class="container_box">
   <a class="btn btn-primary btn-lg">活動量</a>
   <a class="btn btn-danger btn-lg">気分</a>
