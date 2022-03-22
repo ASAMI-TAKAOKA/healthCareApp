@@ -1,4 +1,4 @@
-# 健康管理アプリ
+# 健康管理アプリ（作成中）
 
 # URL　https://health-care-app-20220321.herokuapp.com/
 
