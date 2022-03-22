@@ -2,6 +2,8 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.all.order("created_at DESC")
+    @activity = Record.group(:activity).group_by_day(:created_at).count
+    
   end
 
   def new

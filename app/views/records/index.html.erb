@@ -3,7 +3,13 @@
     <h1>健康状態</h1>
   </div>
 </div>
-<%= line_chart Record.group(:activity).group_by_day(:created_at).count %>
+<%= line_chart @activity %>
+<div class="container_box">
+  <a class="btn btn-primary btn-lg">活動量</a>
+  <a class="btn btn-danger btn-lg">気分</a>
+  <a class="btn btn-warning btn-lg">体調</a>
+  <a class="btn btn-success btn-lg">食欲</a>
+</div>
 <br>
 
 <div class="contents row">
