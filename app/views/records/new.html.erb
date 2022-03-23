@@ -9,7 +9,7 @@
     <%= form_with(model: @record, local: true) do |f|  %>
       <%# 日付選択 %>
       <br>
-      <%= f.datetime_field :sample_at %>
+      <%= f.date_field :created_at %>
       <br>
       <br>
       <%# 活動量 %>

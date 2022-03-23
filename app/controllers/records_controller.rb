@@ -2,8 +2,26 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.all.order("created_at DESC")
-    @activity = Record.group(:activity).group_by_day(:created_at).count
-    
+    # @activity = Record.group(:activity).group_by_day(:created_at).count
+    # 日毎のスコア（actibity）
+    # Record.where(day: "created_at")
+    # @activity_today = Record.select('activity').includes(:user).group_by_day(:created_at)
+    @activity = Record.all
+    # @feeling_today = Record.includes(:user).group(:feeling).group_by_day(:created_at).count
+    # 日毎のスコア（feeling）
+    @feeling = Record.all
+    # # 日毎のスコア（condition）
+    @condition = Record.all
+    # @condition_today = user.records.select('condition')
+    # # 日毎のスコア（appetite）
+    @appetite = Record.all
+    # @activity_record = Record.where(user_id: current_user.id).limit(3).order(activity: "ASC")
+
+    # グラフの基準線作成用の配列
+    # @activitys = []
+    # @activity_record.each do |acti|
+    #   @activitys << acti.activity
+    # end
   end
 
   def new
