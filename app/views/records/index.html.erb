@@ -4,19 +4,19 @@
   </div>
 </div>
 <div class="graph">
-<%= line_chart @activity.group_by_day(:created_at).sum(:activity), xtitle: "日付", ytitle: "スコア", width: "80%", height: "200px" %>
+<%= line_chart @activity.group_by_day(:created_at).sum(:activity), xtitle: "日付", ytitle: "活動量", width: "80%", height: "200px" %>
 </div>
 <br>
 <div class="graph">
-<%= line_chart @feeling.group_by_day(:created_at).sum(:feeling), xtitle: "日付", ytitle: "スコア", width: "80%", height: "200px",colors: ["#b00"] %>
+<%= line_chart @feeling.group_by_day(:created_at).sum(:feeling), xtitle: "日付", ytitle: "気分", width: "80%", height: "200px",colors: ["#b00"] %>
 </div>
 <br>
 <div class="graph">
-<%= line_chart @condition.group_by_day(:created_at).sum(:condition), xtitle: "日付", ytitle: "スコア", width: "80%", height: "200px",colors: ["#ff0"] %>
+<%= line_chart @condition.group_by_day(:created_at).sum(:condition), xtitle: "日付", ytitle: "体調", width: "80%", height: "200px",colors: ["#ff0"] %>
 </div>
 <br>
 <div class="graph">
-<%= line_chart @appetite.group_by_day(:created_at).sum(:appetite), xtitle: "日付", ytitle: "スコア", width: "80%", height: "200px",colors: ["#008000"] %>
+<%= line_chart @appetite.group_by_day(:created_at).sum(:appetite), xtitle: "日付", ytitle: "食欲", width: "80%", height: "200px",colors: ["#008000"] %>
 </div>
 <div class="container_box">
   <a class="btn btn-primary btn-lg">活動量</a>
@@ -26,15 +26,28 @@
 </div>
 <br>
 
-<div class="contents row">
-  <% @records.each do |record| %>
-    <div class="content_record" >
-      <p>記録日：<%= record.created_at.strftime("%F") %></p>
-      <p>活動量：<%= record.activity %></p>
-      <p>気分：<%= record.feeling %></p>
-      <p>体調：<%= record.condition %></p>
-      <p>食欲：<%= record.appetite %></p>
-      <%= link_to '削除', "/records/#{record.id}", method: :delete %>
-    </div>
-  <% end %>
+<div class="contents row mx-auto" style="width: 80%">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">日付</th>
+      <th scope="col">活動量</th>
+      <th scope="col">気分</th>
+      <th scope="col">体調</th>
+      <th scope="col">食欲</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @records.each do |record| %>
+    <tr>
+      <td scope="row"><%= record.created_at.strftime("%F") %></td>
+      <td scope="row"><%= record.activity %></td>
+      <td scope="row"><%= record.feeling %></td>
+      <td scope="row"><%= record.condition %></td>
+      <td scope="row"><%= record.appetite %></td>
+      <td scope="row"><%= link_to '削除', "/records/#{record.id}", method: :delete %></td>
+    <tr>
+     <% end %>
+    </tbody>   
+  </table>
 </div>
