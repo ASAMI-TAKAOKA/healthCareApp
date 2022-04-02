@@ -4,19 +4,19 @@
   </div>
 </div>
 <div class="graph">
-<%= line_chart @activity.group_by_day(:created_at).sum(:activity), xtitle: "日付", ytitle: "活動量", width: "80%", height: "200px" %>
+<%= line_chart @record_all.group_by_day(:created_at).sum(:activity), xtitle: "日付", ytitle: "活動量", width: "80%", height: "200px" %>
 </div>
 <br>
 <div class="graph">
-<%= line_chart @feeling.group_by_day(:created_at).sum(:feeling), xtitle: "日付", ytitle: "気分", width: "80%", height: "200px",colors: ["#b00"] %>
+<%= line_chart @record_all.group_by_day(:created_at).sum(:feeling), xtitle: "日付", ytitle: "気分", width: "80%", height: "200px",colors: ["#b00"] %>
 </div>
 <br>
 <div class="graph">
-<%= line_chart @condition.group_by_day(:created_at).sum(:condition), xtitle: "日付", ytitle: "体調", width: "80%", height: "200px",colors: ["#ff0"] %>
+<%= line_chart @record_all.group_by_day(:created_at).sum(:condition), xtitle: "日付", ytitle: "体調", width: "80%", height: "200px",colors: ["#ff0"] %>
 </div>
 <br>
 <div class="graph">
-<%= line_chart @appetite.group_by_day(:created_at).sum(:appetite), xtitle: "日付", ytitle: "食欲", width: "80%", height: "200px",colors: ["#008000"] %>
+<%= line_chart @record_all.group_by_day(:created_at).sum(:appetite), xtitle: "日付", ytitle: "食欲", width: "80%", height: "200px",colors: ["#008000"] %>
 </div>
 <div class="container_box">
   <a class="btn btn-primary btn-lg">活動量</a>
